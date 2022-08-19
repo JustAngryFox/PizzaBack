@@ -18,6 +18,8 @@ Route::post('/upload_product','App\Http\Controllers\api\ProductController@upload
 
 Route::post('/upload_order','App\Http\Controllers\api\ProductController@upload_order');
 
+Route::get('/get_products','App\Http\Controllers\api\ProductController@get_products');
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

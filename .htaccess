@@ -1,5 +1,4 @@
-DirectoryIndex public/index.php 
-
+DirectoryIndex public/index.php
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
@@ -15,9 +14,9 @@ DirectoryIndex public/index.php
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
+    RewriteRule ^ public/index.php [L]
 
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ public/index.php [L]
 </IfModule>

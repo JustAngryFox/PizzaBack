@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/upload_product','App\Http\Controllers\api\ProductController@upload_product');
+
+Route::post('/upload_order','App\Http\Controllers\api\ProductController@upload_order');
+
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+

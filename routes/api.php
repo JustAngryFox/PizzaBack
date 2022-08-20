@@ -20,6 +20,10 @@ Route::post('/upload_order','App\Http\Controllers\api\ProductController@upload_o
 
 Route::get('/get_products','App\Http\Controllers\api\ProductController@get_products');
 
+Route::get('/get_orders','App\Http\Controllers\api\ProductController@get_orders');
+
+Route::get('/get_product_orders','App\Http\Controllers\api\ProductController@get_product_orders');
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

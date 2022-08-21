@@ -68,14 +68,13 @@ class ProductController extends Controller
 	
 	
 	public function get_orders(){
-		
 	return response()->json([orders::all()]);	
-	
 	}
 	
+	
 	public function get_product_orders(Request $request){
-			return response()->json([
-		DB::table('products_orders')
+	return response()->json([
+	DB::table('products_orders')
 	->select('products_orders.product_id','products_orders.order_id','products.name','products.price','products.image')
 	->join('products','products_orders.product_id','=','products.id')
 	->where('products_orders.order_id','=',$request->input('order_id'))
